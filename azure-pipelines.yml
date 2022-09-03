@@ -4,7 +4,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: k6-load-test@0
+  - task: k6-load-test@0.2.0
     inputs:
       filename: 'src/index.js'
 
