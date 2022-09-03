@@ -6,17 +6,15 @@ on:
     branches: [master]
     
 jobs:
-  k6_cloud_test:
-    name: k6 cloud test run
+  build:
+    name: Run k6 test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Run k6 cloud test
-        uses: k6io/action@v0.1
+        uses: actions/checkout@v2
+      - name: Run k6 local test
+        uses: grafana/k6-action@v0.2.0
         with:
-          filename: test.js
+          filename: src/index.js
           cloud: true
           token: ${{ secrets.K6_CLOUD_API_TOKEN }}
-
