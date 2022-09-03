@@ -16,3 +16,5 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: src/index.js
+          cloud: true
+          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
