@@ -1,16 +1,11 @@
-# azure-pipelines.yml
+trigger:
+  - master
+
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 steps:
-  - task: grafana/k6-action@v0.2.0
+  - task: k6-load-test@0
     inputs:
-      filename: 'src/index.js'
-
-schedules:
-  - cron: '0 0 * * *'
-    displayName: Daily midnight build
-    branches:
-      include:
-        - master
+      filename: src/index.js
