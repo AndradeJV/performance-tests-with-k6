@@ -45,7 +45,6 @@ export let options = {
     ext: {
         loadimpact: {
             projectID: 3599451,
-            // Test runs with the same name groups test runs together
             name: "Tests API"
         }
     }
