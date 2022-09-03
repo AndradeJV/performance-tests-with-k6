@@ -7,3 +7,10 @@ steps:
   - task: k6-load-test@0
     inputs:
       filename: 'src/index.js'
+
+schedules:
+  - cron: '0 0 * * *'
+    displayName: Daily midnight build
+    branches:
+      include:
+        - master
