@@ -45,7 +45,7 @@ export let options = {
     ext: {
         loadimpact: {
             projectID: 3599451,
-            name: "Tests API"
+            name: "API tests"
         }
     }
 }
